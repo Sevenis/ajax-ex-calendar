@@ -5,11 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title></title>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <title>Calendario</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <div class="container">
+            <button id = "prev"> <<< </button>
+            <h1 class = "month" data-this-date="2018-01-01"></h1>
+            <button id = "next"> >>> </button>
+
+            <ul class="month-list"></ul>
+        </div>
+
+        <script id="day-template" type="text/x-handlebars-template">
+          <li data-complete-date="{{completeDate}}">{{day}}  {{month}}</li>
+        </script>
 
 
         <script src="js/script.js" charset="utf-8"></script>
