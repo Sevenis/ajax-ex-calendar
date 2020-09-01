@@ -67,10 +67,10 @@ function insertHolidays(data){
                 listItem.addClass('festivo');
                 console.log(listItem);
             }
+        }, 
+        error: function (richiesta, stato, errori) {
+            alert("E' avvenuto un errore. " + errore);
         }
-
-
-
     });
 }
 
