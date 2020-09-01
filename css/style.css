@@ -18,6 +18,12 @@
 
 .header {
     height: 50px;
+    padding-top: 10px;
+}
+
+.header .fas {
+    line-height: 50px;
+    font-size: 20px;
 }
 
 .header h1 {
@@ -30,9 +36,9 @@
 .month-list {
     padding-top: 20px;
     text-align: center;
-    color: #f0d52b;
+    color: #f9ff84;
 }
 
 .festivo {
-    color: #c90606;
+    color: #e31616;
 }

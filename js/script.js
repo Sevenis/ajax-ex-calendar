@@ -7,10 +7,10 @@ var dataInizio = moment($('h1.month').attr('data-partenza'));
 insertDays(dataInizio);
 insertHolidays(dataInizio);
 
-$('button#next').click(function(){
+$('#next').click(function(){
     next(dataInizio);
 })
-$('button#prev').click(function(){
+$('#prev').click(function(){
     prev(dataInizio);
 })
 
@@ -67,7 +67,7 @@ function insertHolidays(data){
                 listItem.addClass('festivo');
                 console.log(listItem);
             }
-        }, 
+        },
         error: function (richiesta, stato, errori) {
             alert("E' avvenuto un errore. " + errore);
         }
