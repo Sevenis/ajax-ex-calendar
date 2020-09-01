@@ -12,15 +12,19 @@
     </head>
     <body>
         <div class="container">
-            <button id = "prev"> <<< </button>
-            <h1 class = "month" data-this-date="2018-01-01"></h1>
-            <button id = "next"> >>> </button>
-
+            <div class="header">
+                <button id = "prev"> <<< </button>
+                <h1 class = "month" data-partenza="2018-01-01"></h1> <!-- l'attributo data type serve per variarlo lato js-->
+                <button id = "next"> >>> </button>
+            </div>
             <ul class="month-list"></ul>
+
         </div>
 
         <script id="day-template" type="text/x-handlebars-template">
-          <li data-complete-date="{{completeDate}}">{{day}}  {{month}}</li>
+          <li data-completa="{{completeDate}}">
+              {{day}}  {{month}}
+          </li>
         </script>
 
 

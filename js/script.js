@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-var dataCorrente = moment('2018-01-01');
+//dataInizio è un oggetto
+var dataInizio = moment('2018-01-01');
 
-insertDays(dataCorrente);
+insertDays(dataInizio);
 
 
 // $('h1.month').html(dataCorrente.format('MMM') + ' ' + dataCorrente.format('YYYY'));
@@ -21,20 +22,22 @@ function insertDays(data){
     console.log(daysMonth);
 
     for (var i = 1; i <= daysMonth; i++){
-        var source = $("#days-template").html();
+        var source = $("#day-template").html();
         var template = Handlebars.compile(source);
 
-        // var context = {
-        //     day: addZero(i),
-        //
-        //     month: month,
-        //
-        //     completeDate: year + '-' + month + '-' + addZero(i)
-        // };
-        //
-        //
-        // var html = template(context);
-        // $('.month.list').append(html);
+        var context = {
+            day: addZero(i),
+
+            month: month,
+
+            completeDate: year + '-' + month + '-' + addZero(i)
+        };
+
+        console.log(context);
+
+        var html = template(context);
+        console.log(html);
+        $('.month-list').append(html);
     }
 }
 
